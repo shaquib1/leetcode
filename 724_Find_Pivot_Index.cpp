@@ -7,12 +7,13 @@ public:
     for (int i = 0; i < nums.size(); i++)
         sum += nums[i];
     int left_sum = 0;
+    int right_sum = sum;
     for (int i = 0; i < nums.size(); i++)
     {
         left_sum += nums[i];
-        if (left_sum == sum)
+        if (left_sum == right_sum)
             return i;
-        sum -= nums[i];
+        right_sum -= nums[i];
     }
     return -1;
        
