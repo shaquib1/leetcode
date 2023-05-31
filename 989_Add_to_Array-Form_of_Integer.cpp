@@ -1,3 +1,7 @@
+
+//this is temporary code when i read the problem and solve it then i solve it by self
+
+
 class Solution {
 public:
     vector<int> addToArrayForm(vector<int>& num, int k) {
