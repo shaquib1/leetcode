@@ -4,6 +4,8 @@ public:
     bool check(vector<int> &nums)
     {
 
+        // Ans :- in this we find at least one time n-1 is greater than n other than this is false ki arrary is not sorted or rotated
+
         int count = 0;
         int n = nums.size();
 
