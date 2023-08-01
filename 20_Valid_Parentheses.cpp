@@ -1,19 +1,24 @@
-#include <iostream>
-
-using namespace std;
-
-int sum(int a , int b){
-    int sum= a+b;
-    return sum;
-}
-
-int main(){
-    
-    int a,b;
-    cout<<"Enter the number";
-    cin>>a>>b;
-
-int ans=sum(a,b);
-    cout<<"sum is:"<<ans;
-    return 0;
-}
+class Solution {
+public:
+    bool isValid(string s) {
+        stack<char>st;
+        for(auto ch:s)
+        {
+            if(ch=='(' || ch=='{' || ch=='[')
+            st.push(ch);
+            else{
+                if(st.empty())return false;
+                if(ch==')' && st.top()=='(')
+                st.pop();
+                else if(ch=='}'&& st.top()=='{')
+                st.pop();
+                else if(ch==']' && st.top()=='[')
+                st.pop();
+                else
+                return false;
+            }
+        }
+        if(st.empty())return true;
+        return false;
+    }
+};
