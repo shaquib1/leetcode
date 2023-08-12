@@ -19,8 +19,8 @@ public:
                 }
                 else
                 {
-                    digits.push_back(0);
                     digits[i] = 1;
+                      digits.push_back(0);
                 }
             }
         }
